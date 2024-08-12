@@ -1,25 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const profileData = {
+        progress: 75, // Example value
+        completedLessons: 10, // Example value
+        avgScore: {score: 85, total: 100} // Example value
+    };
+
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
-    const completedLessonsElem = document.getElementById('completedLessons');
-    const avgScoreElem = document.getElementById('avgScore');
-    
-    // Dummy data
-    let completedLessons = 5;
-    let avgScore = '3/3';
-    let totalLessons = 10;
+    const completedLessons = document.getElementById('completedLessons');
+    const avgScore = document.getElementById('avgScore');
 
-    progressBar.max = totalLessons;
-    progressBar.value = completedLessons;
-    progressText.textContent = `${(completedLessons / totalLessons) * 100}%`;
+    progressBar.value = profileData.progress;
+    progressText.textContent = `${profileData.progress}%`;
+    completedLessons.textContent = profileData.completedLessons;
+    avgScore.textContent = `${profileData.avgScore.score}/${profileData.avgScore.total}`;
 
-    completedLessonsElem.textContent = completedLessons;
-    avgScoreElem.textContent = avgScore;
+    document.getElementById('resetProgress').addEventListener('click', () => {
+        profileData.progress = 0;
+        profileData.completedLessons = 0;
+        profileData.avgScore = {score: 0, total: 100};
 
-    document.getElementById('resetProgress').addEventListener('click', function() {
-        if (confirm('Are you sure you want to reset your progress?')) {
-            alert('Progress has been reset.');
-            // Logic to reset progress can be added here
-        }
+        progressBar.value = profileData.progress;
+        progressText.textContent = `${profileData.progress}%`;
+        completedLessons.textContent = profileData.completedLessons;
+        avgScore.textContent = `${profileData.avgScore.score}/${profileData.avgScore.total}`;
     });
 });
