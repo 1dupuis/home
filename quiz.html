@@ -17,6 +17,7 @@
                 <li><a href="lessons.html">Lessons</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,20 +25,27 @@
     <section class="quiz">
         <h2>Test Your Knowledge: Passé Composé</h2>
         <p>Answer the following questions to test your understanding of the Passé Composé tense.</p>
+        
         <form id="quizForm">
             <div class="question">
                 <label for="question1">1. How do you say "I ate" in French?</label>
                 <input type="text" id="question1" name="question1" required>
+                <button type="button" class="hint-button" data-target="hint1">Show Hint</button>
+                <p class="hint" id="hint1" style="display:none;">Think about using the verb 'manger' in past tense.</p>
             </div>
 
             <div class="question">
                 <label for="question2">2. Translate "You spoke" into French.</label>
                 <input type="text" id="question2" name="question2" required>
+                <button type="button" class="hint-button" data-target="hint2">Show Hint</button>
+                <p class="hint" id="hint2" style="display:none;">Use the verb 'parler' for this sentence.</p>
             </div>
 
             <div class="question">
                 <label for="question3">3. What is the Passé Composé form of "He finished"?</label>
                 <input type="text" id="question3" name="question3" required>
+                <button type="button" class="hint-button" data-target="hint3">Show Hint</button>
+                <p class="hint" id="hint3" style="display:none;">The verb 'finir' is used here.</p>
             </div>
 
             <button type="submit">Submit Answers</button>
