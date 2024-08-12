@@ -17,6 +17,7 @@
                 <li><a href="lessons.html">Lessons</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,8 +26,9 @@
         <h2>User Profile</h2>
         <div class="profile-info">
             <p><strong>Username:</strong> Student123</p>
-            <p><strong>Completed Lessons:</strong> 5</p>
-            <p><strong>Quiz Scores:</strong> Average Score: 3/3</p>
+            <p><strong>Completed Lessons:</strong> <span id="completedLessons">5</span></p>
+            <p><strong>Quiz Scores:</strong> Average Score: <span id="avgScore">3/3</span></p>
+            <p><strong>Progress:</strong> <progress id="progressBar" value="5" max="10"></progress> <span id="progressText">50%</span></p>
             <button id="resetProgress">Reset Progress</button>
         </div>
     </section>
