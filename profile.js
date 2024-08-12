@@ -19,13 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('resetProgress').addEventListener('click', function() {
         if (confirm('Are you sure you want to reset your progress?')) {
             alert('Progress has been reset.');
-            // Logic to reset progress can be added here, e.g., resetting scores or clearing localStorage
-            completedLessons = 0;
-            avgScore = '0/3';
-            progressBar.value = completedLessons;
-            progressText.textContent = '0%';
-            completedLessonsElem.textContent = completedLessons;
-            avgScoreElem.textContent = avgScore;
+            // Logic to reset progress can be added here
         }
     });
 });
