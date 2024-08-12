@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="French Classroom Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="quiz">
+        <h2>Test Your Knowledge: Passé Composé</h2>
+        <p>Answer the following questions to test your understanding of the Passé Composé tense.</p>
+        <form id="quizForm">
+            <div class="question">
+                <label for="question1">1. How do you say "I ate" in French?</label>
+                <input type="text" id="question1" name="question1" required>
+            </div>
+
+            <div class="question">
+                <label for="question2">2. Translate "You spoke" into French.</label>
+                <input type="text" id="question2" name="question2" required>
+            </div>
+
+            <div class="question">
+                <label for="question3">3. What is the Passé Composé form of "He finished"?</label>
+                <input type="text" id="question3" name="question3" required>
+            </div>
+
+            <button type="submit">Submit Answers</button>
+        </form>
+        <div id="result"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 French Classroom. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
