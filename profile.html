@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>Profile - French Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,23 +18,25 @@
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section class="profile">
-        <h2>User Profile</h2>
-        <div class="profile-info">
-            <p><strong>Username:</strong> Student123</p>
-            <p><strong>Completed Lessons:</strong> <span id="completedLessons">5</span></p>
-            <p><strong>Quiz Scores:</strong> Average Score: <span id="avgScore">3/3</span></p>
-            <p><strong>Progress:</strong> <progress id="progressBar" value="5" max="10"></progress> <span id="progressText">50%</span></p>
-            <button id="resetProgress">Reset Progress</button>
+        <h2>Your Profile</h2>
+        <div id="profileData">
+            <h3>Progress</h3>
+            <progress id="progressBar" value="0" max="100"></progress>
+            <span id="progressText">0%</span>
+            <p>Completed Lessons: <span id="completedLessons">0</span></p>
+            <p>Average Score: <span id="avgScore">0/0</span></p>
+            <button id="resetProgress" class="cta-button">Reset Progress</button>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 French Classroom. All rights reserved.</p>
+        <p>&copy; 2024 French Learning Platform. All rights reserved.</p>
     </footer>
 
     <script src="profile.js"></script>
