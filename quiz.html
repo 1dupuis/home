@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Quiz</title>
+    <title>Quiz - French Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,45 +18,24 @@
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="profile.html">Profile</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section class="quiz">
-        <h2>Test Your Knowledge: Passé Composé</h2>
-        <p>Answer the following questions to test your understanding of the Passé Composé tense.</p>
-        
+        <h2>French Quiz</h2>
         <form id="quizForm">
-            <div class="question">
-                <label for="question1">1. How do you say "I ate" in French?</label>
-                <input type="text" id="question1" name="question1" required>
-                <button type="button" class="hint-button" data-target="hint1">Show Hint</button>
-                <p class="hint" id="hint1" style="display:none;">Think about using the verb 'manger' in past tense.</p>
-            </div>
-
-            <div class="question">
-                <label for="question2">2. Translate "You spoke" into French.</label>
-                <input type="text" id="question2" name="question2" required>
-                <button type="button" class="hint-button" data-target="hint2">Show Hint</button>
-                <p class="hint" id="hint2" style="display:none;">Use the verb 'parler' for this sentence.</p>
-            </div>
-
-            <div class="question">
-                <label for="question3">3. What is the Passé Composé form of "He finished"?</label>
-                <input type="text" id="question3" name="question3" required>
-                <button type="button" class="hint-button" data-target="hint3">Show Hint</button>
-                <p class="hint" id="hint3" style="display:none;">The verb 'finir' is used here.</p>
-            </div>
-
-            <button type="submit">Submit Answers</button>
+            <div id="questionsContainer"></div>
+            <button type="submit" class="cta-button">Submit Answers</button>
         </form>
         <div id="result"></div>
     </section>
 
     <footer>
-        <p>&copy; 2024 French Classroom. All rights reserved.</p>
+        <p>&copy; 2024 French Learning Platform. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
