@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,133 +8,161 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background: #333;
     color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1em 0;
 }
 
-.header .logo img {
-    max-height: 50px;
+header .logo img {
+    height: 50px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin-right: 15px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.intro, .lessons, .quiz, .profile, .contact, .privacy {
-    padding: 2rem;
-    text-align: center;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-h1, h2, h3 {
+section {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
     color: #333;
 }
 
 .cta-button {
-    background-color: #007bff;
+    background: #007BFF;
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 1rem;
+    text-align: center;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
-}
-
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-form label {
-    display: block;
-    margin-top: 1rem;
-    text-align: left;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 1rem;
-}
-
-.progress-bar span {
-    display: block;
-    height: 30px;
-    width: 0;
-    background-color: #007bff;
-    text-align: center;
-    color: #fff;
-    line-height: 30px;
-    transition: width 0.5s ease;
-}
-
-.hint {
-    color: #007bff;
-    cursor: pointer;
-}
-
-.hint-button {
-    background-color: #6c757d;
-    color: #fff;
-    border: none;
-    padding: 0.5rem;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 5px;
+    background: #0056b3;
 }
 
 footer {
-    background-color: #343a40;
+    background: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 1em 0;
     text-align: center;
-    position: fixed;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Lessons Page Styles */
+.lessons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lesson-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 1em;
+    padding: 1em;
+    width: 80%;
+    max-width: 600px;
+}
+
+.lesson-card h3 {
+    margin-top: 0;
+}
+
+/* Quiz Page Styles */
+.quiz {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-question {
+    margin-bottom: 1em;
+}
+
+.quiz-options input {
+    margin-right: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Profile Page Styles */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profileData {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1em;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#progressBar {
     width: 100%;
-    bottom: 0;
+}
+
+#resetProgress {
+    margin-top: 20px;
+}
+
+/* Contact Page Styles */
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contactForm label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contactForm textarea {
+    resize: vertical;
+}
+
+#contactResult {
+    margin-top: 20px;
 }
