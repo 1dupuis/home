@@ -1,22 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
         
-        // Simulate form submission
-        const resultDiv = document.getElementById('contactResult');
-        if (name && email && message) {
-            resultDiv.innerHTML = `<p>Thank you, ${name}! Your message has been sent.</p>`;
-            resultDiv.style.color = "green";
-        } else {
-            resultDiv.innerHTML = `<p>Please fill out all fields.</p>`;
-            resultDiv.style.color = "red";
-        }
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-        // Clear the form
-        document.getElementById('contactForm').reset();
+        // Implement your form submission logic here
+        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+        
+        const resultDiv = document.getElementById('contactResult');
+        resultDiv.textContent = 'Thank you for contacting us! We will get back to you shortly.';
+        contactForm.reset();
     });
 });
